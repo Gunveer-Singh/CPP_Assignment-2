@@ -78,6 +78,8 @@ void addStudent(const std::string& fileName)
     Student s;
     s.inputDetails();
     s.saveToFile(fileName);
+    std::cout << "Student added successfully !" << std::endl;
+    printLines();
 }
 
 void displayAllStudents(const std::string& fileName)
@@ -96,6 +98,7 @@ void displayAllStudents(const std::string& fileName)
 void searchStudent(std::string& fileName)
 {
     int m_rollNo;
+    std::cout << "Student found: " << std::endl;
     std::cout << "Enter Roll No: ";
     std::cin >> m_rollNo;
     printLines();
