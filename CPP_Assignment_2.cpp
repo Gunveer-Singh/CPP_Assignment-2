@@ -98,7 +98,6 @@ void displayAllStudents(const std::string& fileName)
 void searchStudent(std::string& fileName)
 {
     int m_rollNo;
-    std::cout << "Student found: " << std::endl;
     std::cout << "Enter Roll No: ";
     std::cin >> m_rollNo;
     printLines();
@@ -112,6 +111,7 @@ void searchStudent(std::string& fileName)
             if ((char)lines[i] == space){
                 if (lines.substr(0,i) == std::to_string(m_rollNo)){
                     flag = true;
+                    std::cout << "Student found: " << std::endl;
                     std::cout << "Details are as Follows: " << std::endl;
                     std::cout << "Roll No => " << lines.substr(0,i) << std::endl;
                     for (int j = i+1; j < lines.length(); j++){
